@@ -54,9 +54,35 @@ else {
 <div class="col-sm-4 m-0 bg-dark text-light">
 
 <p>
-Examples from the p5 examples page (<a href="https://p5js.org/examples/" target="_blank" class="text-light">p5js.org/examples</a>:)
+Examples from the p5 website (<a href="https://p5js.org/examples/" target="_blank" class="text-light">p5js.org/examples</a>) :
 </p>
+<?php
+$files = glob("ex_scripts/*.js");
 
+foreach ($files as $file) {
+?>
+<a href="index.php?source=ex_scripts&script=<?php echo str_replace(".js", "", str_replace("ex_scripts/", "", $file)); ?>" class="text-light"><?php echo str_replace(".js", "", str_replace("ex_scripts/", "", $file)); ?></a> [<a href="<?php echo $file; ?>" target="_blank" class="text-light">.js</a>]
+<br>
+<?php
+}
+?>
+<br><br>
+<p>
+My scripts :
+</p>
+<?php
+$files = glob("my_scripts/*.js");
+
+foreach ($files as $file) {
+?>
+<a href="index.php?source=my_scripts&script=<?php echo str_replace(".js", "", str_replace("my_scripts/", "", $file)); ?>" class="text-light"><?php echo str_replace(".js", "", str_replace("my_scripts/", "", $file)); ?></a> [<a href="<?php echo $file; ?>" target="_blank" class="text-light">.js</a>]
+<br>
+<?php
+}
+?>
+
+<br><br>
+<!--
 <p>
 <a href="index.php?source=ex_scripts&script=flock" class="text-light">Flocks of birds</a> [<a href="ex_scripts/flock.js" target="_blank" class="text-light">.js</a>]
 
@@ -74,12 +100,22 @@ Examples from the p5 examples page (<a href="https://p5js.org/examples/" target=
 
 <p>
 
-  <a href="index.php?source=my_scripts&script=recursive_circles" class="text-light">recursive_circles</a> [<a href="my_scripts/recursive_circles.js" target="_blank" class="text-light">.js</a>]
+<a href="index.php?source=my_scripts&script=recursive_circles" class="text-light">recursive_circles</a> [<a href="my_scripts/recursive_circles.js" target="_blank" class="text-light">.js</a>]
 
-  <br>
+<br>
+<a href="index.php?source=my_scripts&script=beginner_doodles" class="text-light">beginner_doodles</a> [<a href="my_scripts/beginner_doodles.js" target="_blank" class="text-light">.js</a>]
 
+<br>
 
-</p>
+<a href="index.php?source=my_scripts&script=tutorial_workings" class="text-light">tutorial_workings</a> [<a href="my_scripts/tutorial_workings.js" target="_blank" class="text-light">.js</a>]
+
+<br>
+
+<a href="index.php?source=my_scripts&script=scribbler" class="text-light">scribbler</a> [<a href="my_scripts/scribbler.js" target="_blank" class="text-light">.js</a>]
+
+<br>
+
+</p> -->
 
 
 
